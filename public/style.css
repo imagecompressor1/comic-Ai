@@ -1,0 +1,572 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family:
+        Arial,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #292d66,
+            #080a13 70%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+header {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background:
+        rgba(10,12,25,.8);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+.online {
+
+    color: #aab1ca;
+
+    font-size: 14px;
+}
+
+
+.online span {
+
+    display: inline-block;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #35ed8a;
+
+    margin-left: 6px;
+}
+
+
+main {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+}
+
+
+.hero {
+
+    margin-bottom: 40px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    color: #bbb3ff;
+
+    background:
+        rgba(105,85,255,.15);
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(36px,6vw,70px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+.hero strong {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7767ff,
+            #ff59c8
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero p {
+
+    color: #9da5c0;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        420px 1fr;
+
+    gap: 25px;
+}
+
+
+.card {
+
+    background:
+        rgba(20,24,45,.92);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,.35);
+}
+
+
+.card h2 {
+
+    margin-bottom: 25px;
+}
+
+
+label {
+
+    display: block;
+
+    margin:
+        17px 0 8px;
+
+    color: #aeb6d0;
+
+    font-size: 14px;
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #303651;
+
+    background: #0e1222;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+textarea {
+
+    resize: vertical;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #7566ff;
+}
+
+
+.two {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.styles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 8px;
+}
+
+
+.style {
+
+    padding: 12px 7px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #303651;
+
+    background: #0e1222;
+
+    color: #c8cde0;
+
+    cursor: pointer;
+}
+
+
+.style.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            #6759ff,
+            #a84cff
+        );
+
+    color: white;
+
+    border-color: transparent;
+}
+
+
+.generate {
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6759ff,
+            #b64cff
+        );
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.generate:disabled {
+
+    opacity: .5;
+
+    cursor: wait;
+}
+
+
+.progress {
+
+    margin-top: 20px;
+
+    color: #aeb6d0;
+
+    font-size: 14px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+.progressBar {
+
+    height: 8px;
+
+    margin-top: 10px;
+
+    background: #242940;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+#progressFill {
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6759ff,
+            #ff52c7
+        );
+
+    transition: width .4s;
+}
+
+
+.resultHeader {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.download {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 10px 14px;
+
+    background: #252b46;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.comic {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.empty {
+
+    min-height: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #737c98;
+}
+
+
+.empty div {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+
+.empty p {
+
+    margin-top: 10px;
+}
+
+
+.comicPanel {
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #0c1020;
+
+    border:
+        1px solid #292f4a;
+}
+
+
+.comicPanel img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 1/1;
+
+    object-fit: cover;
+}
+
+
+.panelInfo {
+
+    padding: 14px;
+}
+
+
+.panelTitle {
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+.panelStatus {
+
+    color: #7d86a3;
+
+    font-size: 12px;
+}
+
+
+.panelButtons {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.panelButtons button {
+
+    flex: 1;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #202640;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.errorPanel {
+
+    padding: 50px 15px;
+
+    text-align: center;
+
+    color: #ff8080;
+}
+
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #59627d;
+}
+
+
+@media(max-width:900px) {
+
+    .layout {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width:500px) {
+
+    main {
+
+        padding:
+            25px 12px;
+    }
+
+    .card {
+
+        padding: 17px;
+    }
+
+    .two {
+
+        grid-template-columns: 1fr;
+    }
+
+       }
